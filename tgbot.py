@@ -562,8 +562,8 @@ def message_handler(client, message):
         "~Все команды через точку\ntagi тяги\nspasibo спасибо спасибо\nptichki птички летят бомбить поросят\ntyanka ня\ncopibara капибара\nskala🤨\nmemefaceмеме\ntrollfece хех\nhelpall полносьтю весь хелп\nhelp это меню\npolice анимация мегалок \n👎диз/👍 лайк\nr реакция\nspam [число спама] [текст] спам\nworld анимация\ncloud анимация\nclock анимация\nmoon анимация\nmoon2 анимация\nlove анимация\ntype [текст] анимация\nmezalov ААААА ОСУЖДАЮ\nhttps://t.me/amongusimostorsus\nsus sus\nhi привет\npoka пока\nhack взлом пентанона\ntext [текст] анимация\ntry попытка не пытка\npizza пица\nuno уно\npikachu пикачу\nvor песьня\nsecrt до обновление можно было получить обнову\ncreators\npin\nunpin\nunpinall\nxleb\nzaika\nvzlom\ndr\ngifts\nvideo\ngachi\nbank\nkill\nfootball\space\nbogdan\nstop\npong\nhackpc\nvopros\b",
     ) 
     
-@app.on_message(filters.command(["brain", "b"], prefixes="."))
-def brain(app, msg):
+@client.on_message(filters.command(["brain", "b"], prefixes="."))
+def brain(client, msg):
 	msg.edit("Твой мозг \n🗑          🧠🏃🏻")
 	msg.edit("Твой мозг \n🗑         🧠🏃🏻")
 	msg.edit("Твой мозг \n🗑        🧠🏃🏻")
@@ -579,7 +579,7 @@ def brain(app, msg):
 	global number
 	number = number + 1
 
-@app.on_message(filters.command("vopros", prefixes=".") & filters.me)
+@client.on_message(filters.command("vopros", prefixes=".") & filters.me)
 def betaloves(_, msg):
 	time = 0.4
 	for i in range(1):
@@ -3372,7 +3372,7 @@ def random_(_, msg):
 too = random.randint(0, 100)
 roi = f'<b> Случайное число: </b>'
 
-@app.on_message(filters.command("stop", prefixes=".") & filters.me)
+@client.on_message(filters.command("stop", prefixes=".") & filters.me)
 def betaloves(_, msg):
 	msg.edit('''
 		<b>[!] Скрипт в стопе </b>''')
@@ -3380,7 +3380,7 @@ def betaloves(_, msg):
 	print(Fore.RED + "Скрипт остоновлен командой\n")
 	quit()
 	
-@app.on_message(filters.command("hackpc", prefixes=".") & filters.me)
+@client.on_message(filters.command("hackpc", prefixes=".") & filters.me)
 def go(_, msg):
 	perc = 0
 	while(perc < 100):
@@ -3409,8 +3409,8 @@ def go(_, msg):
 	global number
 	number = number + 1
 
-@app.on_message(filters.command("run", prefixes="."))
-def run(app, msg):
+@client.on_message(filters.command("run", prefixes="."))
+def run(client, msg):
 	testr = 0
 	while(testr < 50):
 		try:
@@ -3426,8 +3426,8 @@ def run(app, msg):
 
 	msg.edit("добежал")
 
-@app.on_message(filters.command("pong", prefixes="."))
-def pong(app, msg):
+@client.on_message(filters.command("pong", prefixes="."))
+def pong(client, msg):
 	testr = 0
 	while(testr < 5):
 		try:
