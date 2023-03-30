@@ -67,6 +67,9 @@ def message_handler(client, message):
             sleep(e.x)
         i -= 1
 
+@client.on_message(filters.command("ping", prefixes=".") & filters.me)
+def message_handler(client, message):
+    client.edit_message_text(message.chat.id, message.id, '<b>Понг!</b>')
 
 # Команда type
 @client.on_message(filters.command("type", prefixes=".") & filters.me)
@@ -559,7 +562,7 @@ def message_handler(client, message):
     client.edit_message_text(
         message.chat.id,
         message.id,
-        "~Все команды через точку\ntagi тяги\nspasibo спасибо спасибо\nptichki птички летят бомбить поросят\ntyanka ня\ncopibara капибара\nskala🤨\nmemefaceмеме\ntrollfece хех\nhelpall полносьтю весь хелп\nhelp это меню\npolice анимация мегалок \n👎диз/👍 лайк\nr реакция\nspam [число спама] [текст] спам\nworld анимация\ncloud анимация\nclock анимация\nmoon анимация\nmoon2 анимация\nlove анимация\ntype [текст] анимация\nmezalov ААААА ОСУЖДАЮ\nhttps://t.me/amongusimostorsus\nsus sus\nhi привет\npoka пока\nhack взлом пентанона\ntext [текст] анимация\ntry попытка не пытка\npizza пица\nuno уно\npikachu пикачу\nvor песьня\nsecrt до обновление можно было получить обнову\ncreators\npin\nunpin\nunpinall\nxleb\nzaika\nvzlom\ndr\ngifts\nvideo\ngachi\nbank\nkill\nfootball\nspace\nbogdan\nstop\npong\nhackpc\nvopros\nb\nvensdei\nderevo",
+        "~Все команды через точку\ntagi тяги\nspasibo спасибо спасибо\nptichki птички летят бомбить поросят\ntyanka ня\ncopibara капибара\nskala🤨\nmemefaceмеме\ntrollfece хех\nhelpall полносьтю весь хелп\nhelp это меню\npolice анимация мегалок \n👎диз/👍 лайк\nr реакция\nspam [число спама] [текст] спам\nworld анимация\ncloud анимация\nclock анимация\nmoon анимация\nmoon2 анимация\nlove анимация\ntype [текст] анимация\nmezalov ААААА ОСУЖДАЮ\nhttps://t.me/amongusimostorsus\nsus sus\nhi привет\npoka пока\nhack взлом пентанона\ntext [текст] анимация\ntry попытка не пытка\npizza пица\nuno уно\npikachu пикачу\nvor песьня\nsecrt до обновление можно было получить обнову\ncreators\npin\nunpin\nunpinall\nxleb\nzaika\nvzlom\ndr\ngifts\nvideo\ngachi\nbank\nkill\nfootball\nspace\nbogdan\nstop\npong\nhackpc\nvopros\nb\nvensdei\nderevo\nping",
     ) 
     
 @client.on_message(filters.command(["brain", "b"], prefixes="."))
